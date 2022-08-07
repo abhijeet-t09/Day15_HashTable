@@ -53,7 +53,7 @@ public class LinkedList<K,V> {
     public void print() {
         MyMapNode<K, V> temp = head;
         while (temp != null) {
-            System.out.print("{ " + temp.key + "=" + temp.value + " }" + "\n");
+            System.out.print("Frequency of " + temp.key + " -> " + temp.value + "\n");
             temp = temp.next;
         }
     }

@@ -6,7 +6,7 @@ public class HashTableMain {
         String paragraph = "To be or not to be";
         String[] splitArray = paragraph.split(" ");
 
-        HashTable<String,Integer> hashTable = new HashTable<>();
+        HashTable<String, Integer> hashTable = new HashTable<>();
 
         for (String word:splitArray) {
             if(hashTable.containsKey(word)){
