@@ -49,12 +49,42 @@ public class LinkedList<K,V> {
         return count;
     }
 
-
-    public void print() {
-        MyMapNode<K, V> temp = head;
-        while (temp != null) {
-            System.out.print("Frequency of " + temp.key + " -> " + temp.value + "\n");
+    public MyMapNode<K,V> search(K searchData) {
+        MyMapNode<K,V> temp = head;
+        while(temp != null){
+            if(temp.key.equals(searchData))
+                return temp;
             temp = temp.next;
         }
+        return null;
+    }
+
+
+    public void append(MyMapNode<K,V> node ) {
+
+        if(head == null) {
+            head = node;
+            tail = node;
+        }
+        else{
+            tail.next = node;
+            tail = node;
+        }
+    }
+
+    public void print(){
+        MyMapNode<K,V> temp = head;
+        while(temp != null){
+            System.out.println(temp);
+            temp = temp.next;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Linked List{" +
+                "head =" + head +
+                ", tail=" + tail +
+                "}\n";
     }
 }
